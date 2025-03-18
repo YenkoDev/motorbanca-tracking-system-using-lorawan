@@ -79,7 +79,7 @@ void do_send(osjob_t* j) {
   }
   Serial.println("Tilt Angle: " + (String)tiltAngle + " deg");
 
-  snprintf(payload, sizeof(payload), "%.2f&%.2f&%.2f&%.2f&%.4f&%.4f", temperature, humidity, pressure, tiltAngle, latitude, longitude);
+  snprintf(payload, sizeof(payload), "%.2f&%.2f&%.2f&%.2f&%.6f&%.6f", temperature, humidity, pressure, tiltAngle, latitude, longitude);
   // Print payload for debugging
   Serial.print("Sending: ");
   Serial.println(payload);
